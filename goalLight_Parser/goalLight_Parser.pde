@@ -19,6 +19,11 @@ int day;
 int month;
 Boolean currentlyPlaying;
 
+//
+  String sections[];
+  String scoreLine;
+  String score[];
+
 // Timer
 
 void setup() {
