@@ -7,7 +7,12 @@ String scores[];
 
 // Favourite Team
 String favouriteTeam = "Vancouver";
-String team[];
+
+// Current Game
+String game[];
+String sections[];
+String scoreLine;
+String score[];
 
 // Score
 int lastScore;
@@ -19,23 +24,20 @@ int day;
 int month;
 Boolean currentlyPlaying;
 
-//
-  String sections[];
-  String scoreLine;
-  String score[];
+
 
 // Timer
 
 void setup() {
   // Screen
+  size(400, 400);
   
   // Date
   getDate();
   
   // Request
   requestPage(scoreboard);
-  
-  // Parse
+
   
   
 }
