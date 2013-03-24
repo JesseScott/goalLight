@@ -7,13 +7,14 @@ void checkTime() {
   
   // Print
   if(millis() % 1000 == 0) {
-    println("Current Counter is " + currentTime);
+    //println("Current Counter is " + currentTime);
   }
   
   // Reset
   if(currentTime > refreshTime) {
     println("Time To Refresh..."); 
-    currentTime = millis();
+    currentTime = millis() / 1000;
+    println("CT " + currentTime);
     lastTime = currentTime;
   }
   

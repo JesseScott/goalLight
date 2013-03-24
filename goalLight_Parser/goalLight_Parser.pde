@@ -42,6 +42,7 @@ void setup() {
   // Font 
   font = loadFont("Serif-48.vlw");
   textFont(font);
+  textSize(24);
   
   // Date
   getDate();
@@ -68,6 +69,8 @@ void draw() {
   checkTime();
   
   // Draw
-  text("Counter: " + currentTime, 100, 100);
+  text("Tracking The Score for " + favouriteTeam, 25, 25);
+  text("Current Score: " + currentScore, 25, 75);
+  text("Seconds Until Refresh: " + (refreshTime - currentTime), 25, 100);
   
 }
