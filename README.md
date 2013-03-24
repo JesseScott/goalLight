@@ -12,3 +12,8 @@ goalLight
  *  c) celebrate if it's a bigger number than the last time!
  *  
  */
+
+
+Uses Processing (www.processing.org) (version 2.0b8)
+
+-- CopyLeft and stuff -- 
