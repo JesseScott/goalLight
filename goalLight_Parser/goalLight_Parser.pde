@@ -15,6 +15,8 @@ int currentScore;
 
 // Day
 String currentDay;
+int day;
+int month;
 Boolean currentlyPlaying;
 
 // Timer
@@ -23,7 +25,7 @@ void setup() {
   // Screen
   
   // Date
-  getDay();
+  getDate();
   
   // Request
   requestPage(scoreboard);

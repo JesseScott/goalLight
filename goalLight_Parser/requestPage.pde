@@ -14,6 +14,7 @@ void requestPage(String _page) {
     // Split
     team = split(scores[i], '{');
     println("Split Into " + team.length + " Sections...");
+    println("");
     
   }
   
@@ -22,9 +23,9 @@ void requestPage(String _page) {
     if(team[i].contains(favouriteTeam)) {
       
       // Print
-      println(i);
+      println("Taking Section #" + i);
       println(team[i]);
-      
+      println("");
       // Pass To Parser
       parseScore(team[i]);
       
