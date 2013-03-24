@@ -7,8 +7,15 @@ void requestPage(String _page) {
   println(" ---- This is the requestPage Data ---- \n"); 
 
   // Get Page  
-  scores = loadStrings(_page);
- 
+  try{
+    scores = loadStrings(_page);
+    debug = "Got The Data... parsing ... parsing ... ";
+  }
+  catch(Exception e) {
+    e.printStackTrace();
+    println("Couldn't Connect... check your internet ??? ");
+    debug =  "Couldn't Connect... check your internet ???";
+  }
   // Print
   for(int i = 0; i < scores.length; i++) {
     // Base Text Result

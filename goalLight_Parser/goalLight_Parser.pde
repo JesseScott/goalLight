@@ -13,7 +13,6 @@
 // GLOBAL VARIABLES
 //--------------------------
 
-
 // Page To Load
 String scoreboard = "http://live.nhle.com/GameData/RegularSeasonScoreboardv3.jsonp?loadScoreboard=?";
 String scores[];
@@ -42,8 +41,9 @@ int refreshTime;
 int currentTime;
 int lastTime;
 
-// Font
+// Screen
 PFont font;
+String debug;
 
 //--------------------------
 // SETUP
@@ -91,5 +91,7 @@ void draw() {
   text("Tracking The Score for " + favouriteTeam, 25, 25);
   text("Current Score: " + currentScore, 25, 75);
   text("Seconds Until Refresh: " + (refreshTime - currentTime), 25, 100);
+  
+  text(debug, 25, 300);
   
 }
