@@ -12,7 +12,7 @@ void requestPage(String _page) {
     println("");
     
     // Split
-    team = split(scores[i], ':');
+    team = split(scores[i], '{');
     println("Split Into " + team.length + " Sections...");
     
   }
@@ -21,18 +21,18 @@ void requestPage(String _page) {
   for(int i = 0; i < team.length; i++) {
     // Get 
     if(team[i].contains(favouriteTeam)) {
+      // Print
       println(i);
       println(team[i]);
-      println(team[i+1]);
-      println(team[i+2]);
-      println(team[i+3]);
+      //println(team[i+1]);
+      //println(team[i+2]);
+      //println(team[i+3]);
+      
+      // Pass To Parser
+      parseScore(team[i]);
+      
+      break;
     } 
   }
-  println(team.length);
-  println("\n\n");
-
-  
-  // Pass To Parser
-  //parseTeam(favouriteTeam, scores[]);
   
 }
