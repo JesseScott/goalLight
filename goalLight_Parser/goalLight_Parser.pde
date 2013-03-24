@@ -24,20 +24,36 @@ int day;
 int month;
 Boolean currentlyPlaying;
 
-
-
 // Timer
+int refreshTime;
+int currentTime;
+int lastTime;
+
+// Font
+PFont font;
+
 
 void setup() {
   // Screen
   size(400, 400);
+  fill(255);
+  smooth();
+  
+  // Font 
+  font = loadFont("Serif-48.vlw");
+  textFont(font);
   
   // Date
   getDate();
+
+  // Timer
+  refreshTime = 120; // 2 minutes
+  currentTime = millis() / 1000;
+  lastTime = currentTime;
+  println(" ---- The Current Time Is " + str(hour()) + ":" + str(minute()) + ":" + str(second()) + " ----- \n"); 
   
   // Request
   requestPage(scoreboard);
-
   
   
 }
@@ -45,7 +61,13 @@ void setup() {
 
 
 void draw() {
+  // Screen
+  background(0);
   
+  //
+  checkTime();
   
+  // Draw
+  text("Counter: " + currentTime, 100, 100);
   
 }
