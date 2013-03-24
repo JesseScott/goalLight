@@ -23,7 +23,7 @@ void parseScore(String _gameDayStats) {
   // Score Section
   for(int i = 0; i < score.length; i++) {
     if(score[i] != "\"atc\"") {
-      println(score[i]);
+      println("Keeping This Line: " + score[i]);
       // Trim The Score
       String tempScore = score[0].substring(1, 2);
       // Assign It To Our Global int
@@ -32,9 +32,23 @@ void parseScore(String _gameDayStats) {
   }
   
   // Print
+  println("");
   println("The Current Score For " + favouriteTeam + " is " + str(currentScore));
 
-  
+  // Did They Score ???
+  if(currentScore > lastScore) {
+    println("");
+    println("GGGOOAAAAAALLLLLL!!!!!!"); 
+    println("");
+  }
+  else {
+    println("");
+    println("No Goal :-( "); 
+    println(""); 
+  }
+
+  // Store Score
+  lastScore = currentScore;
   
   
 }

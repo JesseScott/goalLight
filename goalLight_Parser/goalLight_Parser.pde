@@ -54,6 +54,7 @@ void setup() {
   println(" ---- The Current Time Is " + str(hour()) + ":" + str(minute()) + ":" + str(second()) + " ----- \n"); 
   
   // Request
+  lastScore = currentScore;
   requestPage(scoreboard);
   
   
