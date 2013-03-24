@@ -1,4 +1,8 @@
 
+//--------------------------
+// SCRAPE THE DATA
+//--------------------------
+
 void requestPage(String _page) {
   println(" ---- This is the requestPage Data ---- \n"); 
 

@@ -1,5 +1,18 @@
+/*
+ *  goalLight
+ *  a project by Jesse Scott
+ *  an open-source software/hardware version of that commercial project by that beer company
+ * 
+ *  a) pull the data from the NHL website
+ *  b) get the current score of your favourite team
+ *  c) celebrate if it's a bigger number than the last time!
+ *  
+ */
 
-// Global Variables
+//--------------------------
+// GLOBAL VARIABLES
+//--------------------------
+
 
 // Page To Load
 String scoreboard = "http://live.nhle.com/GameData/RegularSeasonScoreboardv3.jsonp?loadScoreboard=?";
@@ -32,6 +45,9 @@ int lastTime;
 // Font
 PFont font;
 
+//--------------------------
+// SETUP
+//--------------------------
 
 void setup() {
   // Screen
@@ -60,13 +76,15 @@ void setup() {
   
 }
 
-
+//--------------------------
+// DRAW
+//--------------------------
 
 void draw() {
   // Screen
   background(0);
   
-  //
+  // Update The Timer
   checkTime();
   
   // Draw

@@ -1,4 +1,8 @@
 
+//--------------------------
+// GET THE DATE
+//--------------------------
+
 String getDate() {
   day = day();
   month = month();

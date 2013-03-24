@@ -1,4 +1,8 @@
 
+//--------------------------
+// PARSE THE CURRENT SCORE
+//--------------------------
+
 void parseScore(String _gameDayStats) {
   println(" ---- This is the parseScore Data ---- \n"); 
 
