@@ -19,8 +19,13 @@ void requestPage(String _page) {
   
   // Team
   for(int i = 0; i < team.length; i++) {
+    // Get 
     if(team[i].contains(favouriteTeam)) {
+      println(i);
       println(team[i]);
+      println(team[i+1]);
+      println(team[i+2]);
+      println(team[i+3]);
     } 
   }
   println(team.length);

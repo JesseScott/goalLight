@@ -1,22 +1,34 @@
 
 // Global Variables
 
+// Page To Load
 String scoreboard = "http://live.nhle.com/GameData/RegularSeasonScoreboardv3.jsonp?loadScoreboard=?";
-String favouriteTeam = "Vancouver";
-
 String scores[];
+
+// Favourite Team
+String favouriteTeam = "Vancouver";
 String team[];
 
-Boolean currentlyPlaying;
+// Score
 int lastScore;
 int currentScore;
 
+// Day
+String currentDay;
+Boolean currentlyPlaying;
+
+// Timer
 
 void setup() {
+  // Screen
   
+  // Date
+  getDay();
   
+  // Request
   requestPage(scoreboard);
   
+  // Parse
   
   
 }
