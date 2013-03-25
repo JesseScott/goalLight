@@ -37,11 +37,16 @@ void requestPage(String _page) {
       println("Taking Section #" + i);
       println(game[i]);
       println("");
-      // Pass To Parser
-      parseScore(game[i]);
       
-      // Break (to not get next game)
-      break;
+      // Test For Live Game
+      if(game[i-2].contains("LIVE")) {
+        // Pass To Parser
+        parseScore(game[i]);
+        
+        // Break (to not get next game)
+        break;
+      }
+  
     } 
   }
   

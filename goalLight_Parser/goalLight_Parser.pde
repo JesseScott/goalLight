@@ -44,6 +44,7 @@ int lastTime;
 // Screen
 PFont font;
 String debug;
+boolean goal;
 
 //--------------------------
 // SETUP
@@ -64,7 +65,7 @@ void setup() {
   getDate();
 
   // Timer
-  refreshTime = 120; // 2 minutes
+  refreshTime = 12; // 2 minutes
   currentTime = millis() / 1000;
   lastTime = currentTime;
   println(" ---- The Current Time Is " + str(hour()) + ":" + str(minute()) + ":" + str(second()) + " ----- \n"); 
@@ -82,7 +83,12 @@ void setup() {
 
 void draw() {
   // Screen
-  background(0);
+  if(goal) {
+    background(255, 0, 0); 
+  }
+  else {
+    background(0);
+  }
   
   // Update The Timer
   checkTime();

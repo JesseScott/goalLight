@@ -44,11 +44,13 @@ void parseScore(String _gameDayStats) {
     println("");
     println("GGGOOAAAAAALLLLLL!!!!!!"); 
     println("");
+    goal = true;
   }
   else {
     println("");
     println("No Goal :-( "); 
     println(""); 
+    goal = false;
   }
 
   // Store Score
