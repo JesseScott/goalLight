@@ -16,8 +16,16 @@ void parseScore(String _gameDayStats) {
       
       // Set Line With Score
       if(sections[i].contains(favouriteTeam)) {
-         // Set Line
+         // Set Line With Score
          scoreLine = sections[i+2];
+         // Home
+         if(sections[i].contains("htv")) {
+           otherTeam = sections[i-4];
+         }
+         // Away
+         else if(sections[i].contains("atv")) {
+           otherTeam = sections[i+4];
+         }
          // Parse
          score = split(scoreLine, ',');
       }

@@ -19,16 +19,19 @@ String scores[];
 
 // Favourite Team
 String favouriteTeam = "Vancouver";
+String otherTeam;
 
 // Current Game
 String game[];
 String sections[];
 String scoreLine;
+String opponentLine;
 String score[];
 
 // Score
 int lastScore;
 int currentScore;
+int otherScore;
 
 // Day
 String currentDay;
