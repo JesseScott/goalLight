@@ -1,3 +1,4 @@
+
 /*
  *  goalLight
  *  a project by Jesse Scott
@@ -8,6 +9,14 @@
  *  c) celebrate if it's a bigger number than the last time!
  *  
  */
+
+//--------------------------
+// IMPORTS
+//--------------------------
+
+import cc.arduino.*;
+import processing.serial.*;
+
 
 //--------------------------
 // GLOBAL VARIABLES
