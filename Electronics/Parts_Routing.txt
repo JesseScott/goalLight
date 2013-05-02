@@ -1,0 +1,20 @@
+
+
+PARTS
+-----
+
+ARDUINO:	Uno
+TRANSISTOR:	MP222a
+RESISTOR:	2.2k
+POWER:		8 x 1.5V AA Battery
+LIGHT:		12V Skoda CE
+
+ROUTING
+-------
+
+- Arduino Digital Pin Out to Resistor
+- Resistor to Transistor (Base)
+- Transistor (Emitter) to Power Supply (Negative)
+- Power Supply (Positive) to Light Source (Positive)
+- Light Source (Negative) to Transistor (Collector)
+- Arduino Ground to Transistor (Emitter)
