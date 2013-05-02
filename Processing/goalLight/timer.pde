@@ -14,17 +14,21 @@ void checkTime() {
     //println("Current Counter is " + currentTime);
   }
   
+  // Message
+  bWaiting = true;
+  //bGotten = false; bParsing = false; bCalculating = false;
+  
   // Time To Reset ???
   if(currentTime > refreshTime) {
-    println("Time To Refresh..."); 
+    if(verbose) println("Time To Refresh..."); 
     
     // Reset
     currentTime = millis() / 1000;
-    println("CT " + currentTime);
+    if(verbose) println("CT " + currentTime);
     lastTime = currentTime;
     
     // Refresh Data
-    println("Requesting Data... "); 
+    if(verbose) println("Requesting Data... "); 
     requestPage(scoreboard);
   }
   

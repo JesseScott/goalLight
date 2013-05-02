@@ -4,28 +4,28 @@
 //--------------------------
 
 void requestPage(String _page) {
-  println(" ---- This is the requestPage Data ---- \n"); 
+  if(verbose) println(" ---- This is the requestPage Data ---- \n"); 
 
   // Get Page  
   try{
     scores = loadStrings(_page);
-    debug = "Got The Data... parsing ... parsing ... ";
+    bGotten = true;
+    bWaiting = false;
   }
   catch(Exception e) {
     e.printStackTrace();
-    println("Couldn't Connect... check your internet ??? ");
-    debug =  "Couldn't Connect... check your internet ???";
+    if(verbose) println("Couldn't Connect... check your internet ??? ");
   }
   // Print
   for(int i = 0; i < scores.length; i++) {
     // Base Text Result
-    println(scores[i]); 
-    println("");
+    if(verbose) println(scores[i]); 
+    if(verbose) println("");
     
     // Split
     game = split(scores[i], '{');
-    println("Split Into " + game.length + " Sections...");
-    println("");
+    if(verbose) println("Split Into " + game.length + " Sections...");
+    if(verbose) println("");
     
   }
   
@@ -34,9 +34,9 @@ void requestPage(String _page) {
     if(game[i].contains(favouriteTeam)) {
       
       // Print
-      println("Taking Section #" + i);
-      println(game[i]);
-      println("");
+      if(verbose) println("Taking Section #" + i);
+      if(verbose) println(game[i]);
+      if(verbose) println("");
       
       // Test For Live Game
       if(game[i-2].contains("LIVE")) {

@@ -6,11 +6,12 @@
 String getDate() {
   day = day();
   month = month();
-  println("The Day Is " + day); 
-  println("The Month Is " + month); 
+  if(verbose)  println("The Day Is " + day); 
+  if(verbose)  println("The Month Is " + month); 
   
   currentDay = str(month) + "/" + str(day);
-  println(currentDay);
+  
+  if(verbose) println(currentDay);
  
   return currentDay; 
   
