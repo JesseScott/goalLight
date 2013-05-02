@@ -53,12 +53,14 @@ void parseScore(String _gameDayStats) {
     if(verbose) println("GGGOOAAAAAALLLLLL!!!!!!"); 
     if(verbose) println("");
     goal = true;
+    refreshTime = 90;
   }
   else {
     if(verbose) println("");
     if(verbose) println("No Goal :-( "); 
     if(verbose) println(""); 
     goal = false;
+    refreshTime = 12;
   }
 
   // Store Score

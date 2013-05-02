@@ -73,6 +73,10 @@ boolean goal;
 // Messages
 boolean verbose = false;
 
+// Arduino
+int outputPin = 13;
+boolean bLightIO;
+
 //--------------------------
 // SETUP
 //--------------------------
@@ -93,7 +97,7 @@ void setup() {
   if(verbose) println("There Are These Devices Available:");
   if(verbose) println(Arduino.list());
   arduino = new Arduino(this, Arduino.list()[5], 57600);
-  arduino.pinMode(13, Arduino.OUTPUT);
+  arduino.pinMode(outputPin, Arduino.OUTPUT);
   
   // Date
   getDate();
@@ -122,9 +126,16 @@ void draw() {
   // Screen
   if(goal) {
     background(255, 0, 0); 
+    // Light The Light !
+    lightItUp();
   }
   else {
     background(0);
+    // Are We Off ?
+    if(bLightIO == true) {
+      // Turn Off The Light
+      lightItDown();
+    }
   }
   
   // Update The Timer
