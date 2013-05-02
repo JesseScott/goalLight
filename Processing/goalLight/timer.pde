@@ -15,14 +15,12 @@ void checkTime() {
   }
   
   // Message
-  debug = "Waiting To Refresh...";
+  bWaiting = true;
+  //bGotten = false; bParsing = false; bCalculating = false;
   
   // Time To Reset ???
   if(currentTime > refreshTime) {
     if(verbose) println("Time To Refresh..."); 
-    
-    // Message
-    debug = "Refreshing...";
     
     // Reset
     currentTime = millis() / 1000;

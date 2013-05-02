@@ -9,12 +9,12 @@ void requestPage(String _page) {
   // Get Page  
   try{
     scores = loadStrings(_page);
-    debug = "Got The Data... parsing ... parsing ... ";
+    bGotten = true;
+    bWaiting = false;
   }
   catch(Exception e) {
     e.printStackTrace();
-    println("Couldn't Connect... check your internet ??? ");
-    debug =  "Couldn't Connect... check your internet ???";
+    if(verbose) println("Couldn't Connect... check your internet ??? ");
   }
   // Print
   for(int i = 0; i < scores.length; i++) {

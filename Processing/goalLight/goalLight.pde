@@ -35,11 +35,14 @@ Arduino arduino;
 //--------------------------
 
 // Page To Load
-String scoreboard = "http://live.nhle.com/GameData/RegularSeasonScoreboardv3.jsonp?loadScoreboard=?";
+boolean bPlayoffs = false;
+String scoreboard;
+String season = "http://live.nhle.com/GameData/RegularSeasonScoreboardv3.jsonp?loadScoreboard=?";
+String playoffs = "";
 String scores[];
 
 // Favourite Team
-String favouriteTeam = "Toronto";
+String favouriteTeam = "Vancouver";
 String otherTeam;
 
 // Current Game
@@ -67,7 +70,11 @@ int lastTime;
 
 // Screen
 PFont font;
-String debug;
+String waiting = "Waiting To Refresh...";
+String gotten = "Got The Data...";
+String parsing = "Parsing...";
+String calculating = "Calculating...";
+boolean bWaiting, bGotten, bParsing, bCalculating;
 boolean goal;
 
 // Messages
@@ -110,6 +117,12 @@ void setup() {
   
   // Request
   lastScore = currentScore;
+  if(bPlayoffs) {
+    scoreboard = playoffs; 
+  }
+  else {
+    scoreboard = season; 
+  }
   requestPage(scoreboard);
   
   if(verbose) println("");
@@ -142,10 +155,6 @@ void draw() {
   checkTime();
   
   // Draw
-  text("Tracking The Score for " + favouriteTeam, 25, 25);
-  text("Current Score: " + currentScore, 25, 75);
-  text("Seconds Until Refresh: " + (refreshTime - currentTime), 25, 100);
-  
-  text(debug, 25, 300);
+  drawText();
   
 }
