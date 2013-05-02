@@ -110,7 +110,7 @@ void setup() {
   getDate();
 
   // Timer
-  refreshTime = 12; // 2 minutes
+  refreshTime = 12; // 12 Seconds
   currentTime = millis() / 1000;
   lastTime = currentTime;
   if(verbose) println(" ---- The Current Time Is " + str(hour()) + ":" + str(minute()) + ":" + str(second()) + " ----- \n"); 
