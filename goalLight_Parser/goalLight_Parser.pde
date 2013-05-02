@@ -70,6 +70,9 @@ PFont font;
 String debug;
 boolean goal;
 
+// Messages
+boolean verbose = false;
+
 //--------------------------
 // SETUP
 //--------------------------
@@ -87,9 +90,9 @@ void setup() {
   
   
   // Arduino
-  println("There Are These Devices Available:");
-  println(Arduino.list());
-  arduino = new Arduino(this, Arduino.list()[0], 57600);
+  if(verbose) println("There Are These Devices Available:");
+  if(verbose) println(Arduino.list());
+  arduino = new Arduino(this, Arduino.list()[5], 57600);
   arduino.pinMode(13, Arduino.OUTPUT);
   
   // Date
@@ -99,13 +102,15 @@ void setup() {
   refreshTime = 12; // 2 minutes
   currentTime = millis() / 1000;
   lastTime = currentTime;
-  println(" ---- The Current Time Is " + str(hour()) + ":" + str(minute()) + ":" + str(second()) + " ----- \n"); 
+  if(verbose) println(" ---- The Current Time Is " + str(hour()) + ":" + str(minute()) + ":" + str(second()) + " ----- \n"); 
   
   // Request
   lastScore = currentScore;
   requestPage(scoreboard);
   
-  
+  if(verbose) println("");
+  if(verbose) println(" -- END OF SETUP -- ");
+  if(verbose) println("");
   
 }
 

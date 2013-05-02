@@ -4,7 +4,7 @@
 //--------------------------
 
 void requestPage(String _page) {
-  println(" ---- This is the requestPage Data ---- \n"); 
+  if(verbose) println(" ---- This is the requestPage Data ---- \n"); 
 
   // Get Page  
   try{
@@ -19,13 +19,13 @@ void requestPage(String _page) {
   // Print
   for(int i = 0; i < scores.length; i++) {
     // Base Text Result
-    println(scores[i]); 
-    println("");
+    if(verbose) println(scores[i]); 
+    if(verbose) println("");
     
     // Split
     game = split(scores[i], '{');
-    println("Split Into " + game.length + " Sections...");
-    println("");
+    if(verbose) println("Split Into " + game.length + " Sections...");
+    if(verbose) println("");
     
   }
   
@@ -34,9 +34,9 @@ void requestPage(String _page) {
     if(game[i].contains(favouriteTeam)) {
       
       // Print
-      println("Taking Section #" + i);
-      println(game[i]);
-      println("");
+      if(verbose) println("Taking Section #" + i);
+      if(verbose) println(game[i]);
+      if(verbose) println("");
       
       // Test For Live Game
       if(game[i-2].contains("LIVE")) {
