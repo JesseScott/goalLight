@@ -39,7 +39,7 @@ String scoreboard = "http://live.nhle.com/GameData/RegularSeasonScoreboardv3.jso
 String scores[];
 
 // Favourite Team
-String favouriteTeam = "Vancouver";
+String favouriteTeam = "Toronto";
 String otherTeam;
 
 // Current Game

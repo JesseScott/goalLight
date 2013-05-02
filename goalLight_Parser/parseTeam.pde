@@ -9,6 +9,9 @@ void parseScore(String _gameDayStats) {
   // Split String
   sections = split(_gameDayStats, ':');
   
+  // Message
+  debug = "... parsing...";
+  
   // Get Line With Score
   for(int i = 0; i < sections.length; i++) {
       // Print
@@ -47,13 +50,16 @@ void parseScore(String _gameDayStats) {
   if(verbose) println("");
   if(verbose) println("The Current Score For " + favouriteTeam + " is " + str(currentScore));
 
+  // Message
+  debug = "... calculating...";
+  
   // Did They Score ???
   if(currentScore > lastScore) {
     if(verbose) println("");
     if(verbose) println("GGGOOAAAAAALLLLLL!!!!!!"); 
     if(verbose) println("");
     goal = true;
-    refreshTime = 90;
+    refreshTime = 30;
   }
   else {
     if(verbose) println("");

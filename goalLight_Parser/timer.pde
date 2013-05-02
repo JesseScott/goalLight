@@ -14,9 +14,15 @@ void checkTime() {
     //println("Current Counter is " + currentTime);
   }
   
+  // Message
+  debug = "Waiting To Refresh...";
+  
   // Time To Reset ???
   if(currentTime > refreshTime) {
     if(verbose) println("Time To Refresh..."); 
+    
+    // Message
+    debug = "Refreshing...";
     
     // Reset
     currentTime = millis() / 1000;
