@@ -39,12 +39,18 @@ void requestPage(String _page) {
       if(verbose) println("");
       
       // Test For Live Game
-      if(game[i-2].contains("LIVE")) {
+      if(game[i].contains("LIVE")) {
+        println("!!!\n");
         // Pass To Parser
         parseScore(game[i]);
         
         // Break (to not get next game)
         break;
+      }
+      else {
+        println("???");
+        println(game[i-2]);
+        println(""); 
       }
   
     } 

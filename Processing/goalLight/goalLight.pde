@@ -78,7 +78,7 @@ boolean bWaiting, bGotten, bParsing, bCalculating;
 boolean goal;
 
 // Messages
-boolean verbose = false;
+boolean verbose = true;
 
 // Arduino
 int outputPin = 13;
