@@ -24,6 +24,13 @@ import processing.serial.*;
 
 
 //--------------------------
+// DECLARATIONS
+//--------------------------
+
+Arduino arduino;
+
+
+//--------------------------
 // GLOBAL VARIABLES
 //--------------------------
 
@@ -78,6 +85,13 @@ void setup() {
   textFont(font);
   textSize(24);
   
+  
+  // Arduino
+  println("There Are These Devices Available:");
+  println(Arduino.list());
+  arduino = new Arduino(this, Arduino.list()[0], 57600);
+  arduino.pinMode(13, Arduino.OUTPUT);
+  
   // Date
   getDate();
 
@@ -90,6 +104,7 @@ void setup() {
   // Request
   lastScore = currentScore;
   requestPage(scoreboard);
+  
   
   
 }
